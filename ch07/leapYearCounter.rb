@@ -10,7 +10,7 @@ puts 'Please type an ending year:'
 puts 'All leap years below:'
   while starting <= ending
     if (starting%100 != 0 and starting%4 ==0) or (starting%100 == 0 and starting%400== 0)
-	  puts starting
-	end
-	starting= starting+1
+      puts starting
+    end
+    starting= starting+1
   end
