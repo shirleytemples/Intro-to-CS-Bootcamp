@@ -1,6 +1,6 @@
 puts 'time to sing 99 bottles'.capitalize
 bottles = 99
-while bottles !=0 && bottles != 1 && bottles != 2
+while bottles > 2
   puts bottles.to_s + ' bottles of beer on the wall, ' + bottles.to_s + ' bottles of beer.'
   bottles= bottles-1
   puts 'take one and pass it around, ' + bottles.to_s + ' bottles of beer on the wall.'
