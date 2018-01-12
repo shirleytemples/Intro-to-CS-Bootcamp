@@ -1,28 +1,23 @@
-array = ['big', 'small', 'Happy', 'little', 'slow', 'fantastic', 'Xenon', 'glorious', 'he', 'Jazz', 'zebra']
-sorted_array = []
-
-def mySort(array, sorted_array)
-  if array.length <= 0
-    return
+def sort_meth unsorted, sorted
+  if unsorted.length == 0
+    return sorted
   end
-  x = 0
-  y = 0
-  while y < array.length 
-    if array[x] < array[y]
-      y += 1
-    elsif array[x] > array[y]
-      x = y
-      y += 1
+  new_unsorted = []
+  smallest = unsorted.pop
+
+  unsorted.each do |testword|
+    if testword < smallest
+      new_unsorted.push smallest
+      smallest = testword
     else
-      y += 1
+      new_unsorted.push testword
     end
   end
-  sorted_array.push(array[x]) 
-  array.delete(array[x])
-  mySort(array, sorted_array)
-end
-mySort(array, sorted_array)
+  sorted.push smallest
+  unsorted = new_unsorted
 
-puts sorted_array
-puts
-puts array
+  sort_meth new_unsorted, sorted
+end
+
+puts (sort_wrap(['banana',  'zebra',  'dolphin',  'apple',  'Chris',  'faculty',
+'Berkeley',  'Shirley']))
