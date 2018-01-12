@@ -7,7 +7,7 @@ return 'zero'
 end
 
 
-num_string = '' # This is the string we will return, define it an start 'empty'
+num_string = '' 
 
 ones_place = [ 'one', 'two', 'three',
 'four', 'five', 'six',
@@ -76,8 +76,8 @@ num_string = num_string + ' '
 end
 end
 
-write = left/100 # how many hundreds left
-left = left - write*100 # subtract off those hundreds
+write = left/100 
+left = left - write*100 
 
 if write > 0
 # recursion
@@ -90,8 +90,8 @@ num_string = num_string + ' '
 end
 end
 
-write = left/10 # how many tens left
-left = left - write*10 # subtract off those tens
+write = left/10 
+left = left - write*10
 
 if write > 0
 if ((write == 1) and (left > 0))
@@ -109,8 +109,8 @@ num_string = num_string + '-'
 end
 end
 
-write = left # how many ones left
-left = 0 # subtract off those ones
+write = left 
+left = 0 
 
 if write > 0
 num_string = num_string + ones_place[write-1]
